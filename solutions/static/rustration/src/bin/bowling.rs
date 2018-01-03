@@ -1,5 +1,6 @@
-use std::io;
-use std::io::BufRead;
+extern crate rustyline;
+
+use rustyline::Editor;
 
 /// Iterator over frame scores
 struct FrameIter<'a> {
@@ -62,12 +63,13 @@ fn score(balls: &Vec<u16>) -> u16 {
 }
 
 fn main() {
-    let stdin = io::stdin();
+    let mut rl = Editor::<()>::new();
 
-    println!("Enter ball scores one per line; end input with CTRL-D");
+    println!("Enter ball scores separated by spaces; <ENTER> when done");
     
-    let balls: Vec<u16> = stdin.lock().lines()
-        .map(|x| x.unwrap().parse().unwrap())
+    let balls: Vec<u16> = rl.readline("> ").unwrap()
+        .split_whitespace()
+        .map(|x| x.parse().unwrap())
         .collect();
 
     let result = score(&balls);
