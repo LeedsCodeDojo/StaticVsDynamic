@@ -1,0 +1,6 @@
+[package]
+name = "bowling"
+version = "0.1.0"
+authors = ["Jez Cope <j.s.cope@sheffield.ac.uk>"]
+
+[dependencies]
