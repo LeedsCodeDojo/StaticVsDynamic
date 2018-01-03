@@ -4,9 +4,6 @@
 
 * Swap with a pair in the other group
 * Give a mark for each successful test case passed
-* Deduct a mark for each case of a broken rule
-    * Any uncertainly, ask a Judge
-* Scores will be aggregated
 
 ### Test Cases
 
