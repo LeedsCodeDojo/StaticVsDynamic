@@ -4,7 +4,7 @@ use rustyline::Editor;
 
 /// Iterator over frame scores
 struct FrameIter<'a> {
-    balls: &'a Vec<u16>,
+    balls: &'a [u16],
     frame_start: usize,
     frame: usize
 }
@@ -12,7 +12,7 @@ struct FrameIter<'a> {
 impl<'a> FrameIter<'a> {
 
     /// Constructs a new FrameIter borrowing a Vec of individual scores
-    pub fn new(balls: &'a Vec<u16>) -> FrameIter {
+    pub fn new(balls: &'a [u16]) -> FrameIter {
         FrameIter {
             balls: balls,
             frame_start: 0,
@@ -58,7 +58,7 @@ impl<'a> Iterator for FrameIter<'a> {
 }
 
 /// Calculate the score of a whole game
-fn score(balls: &Vec<u16>) -> u16 {
+fn score(balls: &[u16]) -> u16 {
     FrameIter::new(balls).sum()
 }
 
