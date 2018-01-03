@@ -16,36 +16,44 @@
 
 2. Lots of simple balls
 
-    [2,3] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [3,2] -> 26
+    [0,0] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [3,2] -> 21
 
 3. Spare
 
     [5,5] [6,2] -> 24
+    
+4. Gutter Spare
 
-4. Lots of Spares
+    [5,5] [0,1] -> 11
+
+5. Lots of Spares
 
     [5,5] [5,5] [5,5] [5,5] [5,1] -> 66
 
-5. Strike
+6. Strike
 
     [10,-] [6,3] -> 28
 
-6. Lots of Strikes
+7. Gutter Strike
+
+    [10,-] [0, 0] [1, 1] -> 12
+
+8. Lots of Strikes
 
     [10,-] [10,-] [10,-] [10,-] [1, 1] -> 95
 
-7. Spare at end of game
+9. Spare at end of game
 
     [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [8,2] 5 ->  33
     
-8. Strike at end of game
+10. Strike at end of game
 
     [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [10,-] 8 1 ->  37
 
-9. Super-Strike at end of game
+11. Super-Strike at end of game
 
     [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [1,1] [10,-] 10 10 ->  48
  
-10. Perfect game
+12. Perfect game
 
     [10,-] [10,-] [10,-] [10,-] [10,-] [10,-] [10,-] [10,-] [10,-] [10,-] 10 10 -> 300
